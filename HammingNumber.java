@@ -22,10 +22,9 @@ public class HammingNumber {
             for (int i = 2; copy >= 0; i++) {
                 if (copy % i == 0) {
                     System.out.print(i + " x ");
-                    copy  = copy/i;
+                    copy = copy / i;
 
-                    if (i != 2 && i != 3 && i != 5)
-                    {
+                    if (i != 2 && i != 3 && i != 5) {
                         flag = 1;
                         break;
                     }

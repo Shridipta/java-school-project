@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class LuckyNumbers {
     int arr[], n;
-    LuckyNumbers(int nn)
-    {
+
+    LuckyNumbers(int nn) {
         n = nn;
         arr = new int[n];
     }
-    void display()
-    {
+
+    void display() {
         int i, k = 0, c = 2;
         for (i = 0; i < n; i++)
             arr[i] = i + 1;
@@ -26,6 +26,7 @@ public class LuckyNumbers {
         for (i = 0; i < n; i++)
             System.out.println(arr[i]);
     }
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.println("ENTER THE VALUE OF N:");

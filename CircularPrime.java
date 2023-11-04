@@ -2,10 +2,12 @@ import java.util.*;
 
 public class CircularPrime {
     int n;
+
     CircularPrime() {
         n = 0;
     }
-    int round(int x){
+
+    int round(int x) {
         String res = "", tmp = "";
         tmp = Integer.toString(x);
         res = tmp.substring(1) + tmp.charAt(0);
@@ -14,7 +16,7 @@ public class CircularPrime {
 
     boolean checkPrime(int x) {
         int c = 0;
-        for (int i = 1;i <= x;i++){
+        for (int i = 1; i <= x; i++) {
             if (x % i == 0)
                 c++;
         }
@@ -33,8 +35,7 @@ public class CircularPrime {
             int dig = cp % 10;
             if (c == length) {
                 break;
-            }
-            else {
+            } else {
                 c++;
             }
             cp = cp / 10;
@@ -43,7 +44,7 @@ public class CircularPrime {
         boolean res = false;
         int tmp = n;
         res = checkPrime(tmp);
-        for (int i = 0;i < c;i++) {
+        for (int i = 0; i < c; i++) {
             int ans = round(tmp);
             tmp = ans;
             ans = n;
@@ -53,6 +54,7 @@ public class CircularPrime {
         else
             System.out.println("A Circular Prime Number");
     }
+
     public static void main(String[] args) {
         CircularPrime obj = new CircularPrime();
         obj.check();
